@@ -9,7 +9,7 @@ Skrip untuk mencari angka 2D dari binatang/kode alam atau kebalikannya<br/>
 <pre>bash cari3Dv1.1.sh "binatang/kode alam/angka"</pre>
 <br/>Tanpa tanda kutip, bisa karakter dan angka.<br/>
 <h2>3. Pengkombinasi Angka feeling ke angka mistiknya</h2>
-<br/>Skrip untuk mengkombinasikan angka 2D dari angka mistiknya.<br/>
+<br/>Skrip untuk mengkombinasikan angka 2D dari angka mistik/Indexnya.<br/>
 <pre>bash ngecaKangka.sh "Angka 2D"</pre>
 <br/><i>Tanpa tanda kutip, hanya 2D angka.</i><br/>
 <h2>Persyaratan</h2><br/>
