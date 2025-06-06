@@ -11,11 +11,27 @@ then
 busybox echo -e "\n### Tidak ada buku 3D.\nUnduh di github jendraljack\n"
 kill -9 $$
 fi
-busybox echo -e "\n### Skrip pencari kode binatang 3D ###\n"
+busybox echo -e "\n### Skrip pencari kode binatang/alam/mimpi/angka 3D ###\n"
 busybox echo -e "Mencari $@...\n"
 sleep 2
 echo -n "$@" > $dwp/input
+cat $dwp/input|busybox fold -w 1 > $dwp/splitinput
+if [ ! -z "$(cat $dwp/splitinput|grep "[0-9]")" ]
+then
+if [ ! -z "$(cat $dwp/splitinput|grep "[a-zA-Z]")" ]
+then
+busybox echo -e "\n### Jika input angka jangan input dengan huruf/kata. atau\n### Jika input huruf/kata jangan input dengan angka\n"
+kill -9 $$
+fi
+fi
+#
 jkata="$(cat $dwp/input|busybox wc -w)"
+jstring="$(cat $dwp/input|busybox wc -c)"
+if [ "$jstring" == "1" ]
+then
+busybox echo -e "\n### Minimal input Satu kata bahasa indonesia\n### jika input angka harus maksimal 3D\n"
+kill -9 $$
+fi
 #
 if [ "$jkata" -gt "1" ]
 then
