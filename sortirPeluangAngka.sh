@@ -1,6 +1,6 @@
 #!/system/bin/sh
 dirfold="$(dirname $(realpath $0))"
-if [ ! -d "$dirfold/cache/sortit" ]
+if [ ! -d "$dirfold/cache/sortir" ]
 then
 mkdir -p $dirfold/cache/sortir
 fi
