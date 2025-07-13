@@ -13,6 +13,5 @@ Skrip ini akan menyortir angka ,angka berapa yang paling kecil keluar yang nanti
 buat berkas txt berisi data pengeluaran minimal 2 kali terakhir, jalankan skrip diikuti berkas keluaran yang dibuat.<br/><pre>bash sortirPeluangAngka.sh berkasKeluaran.txt</pre><br/>
 <h2>Persyaratan</h2><br/>
 <i>* Linux/Android<br/>
-* Termux/Mt terminal Terpasang busybox
-</i><br/>
-<i>Angka yang dihasilkan dari skrip di atas, Jangan jadikan patokan.<br/>Ini hanya buat perbandingan, utamakan opsi pribadi.</i>
+* Termux/Mt terminal Terpasang busybox</i><br/>
+DISCLAIMER: <i>Angka yang dihasilkan dari skrip di atas, Jangan jadikan patokan.<br/>Ini hanya buat perbandingan, utamakan opsi pribadi.</i>
