@@ -13,13 +13,13 @@ echo "### Gunakan: bash $(basename $0) berkasKeluaran.txt"
 echo
 exit 1
 fi
-
+datakeluar="$(dirname $(realpath $1))/$(basename $1)"
 echo "########################"
-echo "Angka keluaran HK 9x terakhir"
+echo "Angka keluaran HK $(cat $datakeluar|busybox wc -w) kali terakhir"
 echo 
-cat $(dirname $(realpath $1))/$(basename $1)
+cat $datakeluar
 echo
-cat $(dirname $(realpath $1))/$(basename $1)|grep -o "[0-9]" > $dirfold/cache/split1
+cat $datakeluar|grep -o "[0-9]" > $dirfold/cache/split1
 cat $dirfold/cache/split1|grep 1 > $dirfold/cache/sortir/1
 cat $dirfold/cache/split1|grep 2 > $dirfold/cache/sortir/2
 cat $dirfold/cache/split1|grep 3 > $dirfold/cache/sortir/3
@@ -34,7 +34,7 @@ echo
 echo "Peluang keluar angka"
 sortiR(){
 find $dirfold/cache/sortir -type f > $dirfold/cache/split2
-cat $dirfold/cache/split2|busybox awk '{print "echo -n \"angka => \$(basename " $0 ") sudah keluar \"\necho \"\$((\$(cat " $0"|wc -c)/2)) kali\""}' > $dirfold/00-$(basename $0)
+cat $dirfold/cache/split2|busybox awk '{print "echo -n \"angka => \$(basename " $0 ") sudah keluar \"\necho \"\$(cat " $0"|wc -w) kali\""}' > $dirfold/00-$(basename $0)
 bash "$dirfold/00-$(basename $0)"
 sleep 3
 echo
